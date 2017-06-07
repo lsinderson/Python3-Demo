@@ -1,0 +1,23 @@
+import random
+
+# a list of potential answers given by the magic 8 ball. 
+responseList = ["It is certain","It is decidedly so","Without a doubt", "Yes definitely",
+                "You may rely on it","As I see it, yes","Most likely","Outlook good",
+                "Yes","Signs point to yes","Reply hazy try again","Ask again later",
+                "Better not tell you now","Cannot predict now","Concentrate and ask again",
+                "Don't count on it","My reply is no","My sources say no","Outlook not so good",
+                "Very doubtful"]
+
+
+question = input("Ask me a question?\n") #ask the user for the first question.
+randNum = random.randint(0,19) #generate a random number between 0 and 19.
+print(responseList[randNum] + "\n") #print the response from the list at the same index.
+
+while question != "": #Loop through the code until the user inputs a blank string.
+    question = input("Ask me another question?\n") 
+    if question != "": #Check to see if the user input a string.
+        randNum = random.randint(0,19) 
+        print(responseList[randNum] + "\n")
+    else: #if the question entered by the user is blank.
+        print("Goodbye") #print "Goodbye" to the user.
+    
